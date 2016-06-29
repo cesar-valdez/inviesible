@@ -87,7 +87,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 
 .footer .contenedor {display: flex; justify-content: space-between;}
 
-.contacto{width: 320px; display: flex; flex-wrap: wrap; align-items: center;}
+.contacto{width: 300px; display: flex; flex-wrap: wrap; align-items: center;}
 
 .contacto img{display: block;}
 
@@ -141,6 +141,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 
 	.contenedor-guitarra-a{padding: 0;}
 }
+
+
+@media screen and (max-width: 767px)
+{
+	/*footer*/
+	.footer .contenedor{display: block;}
+
+	.contacto{margin: 0 auto;}
+
+	.contacto a{margin: 0;}
+
+	.formulario{display: block; margin: 0 auto; width: 320px;}
+
+	.intereses label{display: block; font-size: 16px;}
+
+	.col1{margin: 0;}
+
+	input[type="text"],
+	input[type="email"]
+	{		
+		font-size: 16px; padding: 5px;
+	}
+
+	textarea{width: 100%;}
+
+	input[type="radio"],
+	input[type="checkbox"]
+	{		
+		zoom: 1.5;
+	}
+
+}
+
+
+
 
 /*medida celulares 650px*/
 @media screen and (max-width: 650px)
