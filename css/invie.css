@@ -139,6 +139,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 
 	.contenedor-guitarra-b{position: static; margin: 0;}
 
+	.contenedor-guitarra-a{padding: 0;}
 }
 
 /*medida celulares 650px*/
@@ -177,6 +178,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 
 	/*Guitarras*/
 	.guitarra img{width: 200px;}
+
+	.tittle-b{font-size: 30px;}
 
  }
 
