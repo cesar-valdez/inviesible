@@ -5,6 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:500,700|Allerta' rel='stylesheet' type='text/css'>
     <title>Invie - tus mejores guitarras</title>
    <link rel="stylesheet" type="text/css" href="css/invie.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <!--<link rel="stylesheet" media="(max-width:800px)" type="text/css" href="css/media-querie.css">-->
 </head>
 <body>
@@ -14,7 +15,8 @@
                 <!-- el alt es una buena practica el texto que sale si la imagen no carga-->
                 <img src="img/invie.png" width="286" height="60" alt="invie-logotipo" /><!--imagen-->
             </figure>
-            <nav class="menu"><!-- menu -->
+            <span class="burger-button icon-menu" id="burger-button"></span>
+            <nav class="menu" id="menu"><!-- menu -->
                 <ul><!-- lista desordenada(separados por puntos) -->
                     <li><!-- elementos enlistados -->
                         <a href="index.html">Home</a><!-- ancla para links -->
@@ -104,5 +106,38 @@
             </form>
         </div>
     </footer>
+    <script>
+        //para hacer medias en JS
+        var consulta = window.matchMedia('(max-width: 500px)');
+        consulta.addListener(mediaQuery);
+
+
+        var $bugerButton =  document.getElementById('burger-button');
+        var $menu =  document.getElementById('menu');
+
+        // $bugerButton.addEventListener('touchstart', toggleMenu);
+         function toggleMenu()
+         {
+             $menu.classList.toggle('active')
+         };
+
+
+        function mediaQuery()
+        {
+            if (consulta.matches)
+            {
+                console.log('se cumplio la condicion');
+                $bugerButton.addEventListener('touchstart', toggleMenu)
+            }
+            else
+            {
+                console.log('no se cumplio la condicion');
+                $bugerButton.removeEventListener('touchstart', toggleMenu)
+            }
+        }
+
+        mediaQuery();
+
+    </script>
 </body>
 </html>
