@@ -13,7 +13,7 @@
         <header id="header" class="header contenedor"><!-- encabezado-->
             <figure class="logotipo"><!-- envuelve una imagen-->
                 <!-- el alt es una buena practica el texto que sale si la imagen no carga-->
-                <img src="img/invie.png" width="286" height="60" alt="invie-logotipo" /><!--imagen-->
+                <img src="img/invie.png" srcset="img/invie.png 1x, img/invie2x.png 2x" width="286" height="60" alt="invie-logotipo" /><!--imagen-->
             </figure>
             <span class="burger-button icon-menu" id="burger-button"></span>
             <nav class="menu" id="menu"><!-- menu -->
@@ -38,11 +38,17 @@
     </section>
     <section id="guitarras" class="guitarras contenedor"><!--Seccion Guitarras-->
     <h2>Nuestras guitarras</h2>
+    <!--para hacer videos responsivos de youtube -->
+    <div class="video-responsive-contenedor">
+        <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/tNunnoAIJ7Y" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!--para hacer videos responsivos subidos por src-->
+    <video src="videos/Reason.mp4"></video>
     <article class="guitarra"><!-- Guitarra 1 -->
-        <img class="right" src="img/invie-acustica.png" alt="Guitarra Invie Acustica" width="350" />
+        <img class="right" data-src="img/invie-acustica.png|img/invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350" />
         <div class="contenedor-guitarra-a">
             <h3 class="tittle-b">Invie Acustica</h3>
-            <ol>
+            <ol>    
                 <li>Estilo Vintage</li>
                 <li>Madera pura</li>
                 <li>incluye estuche de invisible de aluminio</li>
@@ -50,7 +56,7 @@
         </div>
     </article><!-- engloban contenido muy especifico--> 
     <article class="guitarra b  "><!-- Guitarra 2 -->
-        <img class="left" src="img/invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
+        <img class="left" data-src="img/invie-classic.png|img/invie-classic2x.png" alt="Guitarra Invie Classic" width="350"/>
         <div class="contenedor-guitarra-b">
             <h3 class="tittle-b">Invie Classic</h3>
             <ol>
@@ -64,7 +70,7 @@
     <footer class="footer">
         <div class="contenedor"> 
             <div class="contacto">
-                <img src="img/invie-white.png" alt="logotipo blanco">
+                <img data-src="img/invie-white.png|img/invie-white2x.png" alt="logotipo blanco">
                 <a href="tel:+578442906072"><strong>Telefono</strong> <span>8442906072</span></a>
                 <a href="mailto:cesark_19@hotmail.com"><strong>E-mail</strong> <span>cesark_19@hotmail.com</span></span></a>
             </div>
@@ -106,6 +112,7 @@
             </form>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
     <script>
         //para hacer medias en JS
         var consulta = window.matchMedia('(max-width: 500px)');
@@ -137,6 +144,11 @@
         }
 
         mediaQuery();
+
+        //lazy   loading
+        var bLazy = new Blazy({
+            selector:'img'
+        });
 
     </script>
 </body>
