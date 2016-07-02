@@ -8,7 +8,7 @@
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
    
 	</head>
-	<body>
+	<body class="precios">
 		<header id="header" class="header background"><!-- encabezado-->
 		<div class="contenedor">
 			<span class="burger-button icon-menu" id="burger-button"></span>
@@ -115,6 +115,8 @@
         </div>
     </footer>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
     <script>
         //para hacer medias en JS
         var consulta = window.matchMedia('(max-width: 500px)');
@@ -131,6 +133,7 @@
          };
 
 
+
         function mediaQuery()
         {
             if (consulta.matches)
@@ -142,7 +145,7 @@
             {
                 console.log('no se cumplio la condicion');
                 $bugerButton.removeEventListener('touchstart', toggleMenu)
-            }
+            } 
         }
 
         mediaQuery();
@@ -152,6 +155,24 @@
             selector:'img'
         });
 
+        //Gestos touch
+        var $body = document.body;
+
+         function showMenu()
+         {
+             $menu.classList.add('active')
+         };
+
+         function hideMenu()
+         {
+             $menu.classList.remove('active')
+         };
+
+        var gestos = new Hammer($body);
+        
+        gestos.on('swipeleft', hideMenu);
+        gestos.on('swiperight', showMenu);
+    
     </script>
 	</body>
 </html>
