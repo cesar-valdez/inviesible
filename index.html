@@ -112,6 +112,7 @@
             </form>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
     <script>
         //para hacer medias en JS
@@ -127,6 +128,7 @@
          {
              $menu.classList.toggle('active')
          };
+
 
 
         function mediaQuery()
@@ -150,6 +152,24 @@
             selector:'img'
         });
 
+        //Gestos touch
+        var $body = document.body;
+
+         function showMenu()
+         {
+             $menu.classList.add('active')
+         };
+
+         function hideMenu()
+         {
+             $menu.classList.remove('active')
+         };
+
+        var gestos = new Hammer($body);
+        
+        gestos.on('swipeleft', hideMenu);
+        gestos.on('swiperight', showMenu);
+    
     </script>
 </body>
 </html>
