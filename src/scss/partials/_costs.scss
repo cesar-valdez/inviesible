@@ -1,0 +1,24 @@
+
+.in_Table {
+	width: 100%;
+	margin: 65px 0;
+
+	th {
+		background: #273b47; 
+		color: white; 
+		padding: 10px 20px; 
+		text-align: left;
+	}
+
+	td {
+		padding: 20px;
+	}
+
+	table, 
+	th, 
+	td {
+		border: 1px solid #273b47; 
+		border-collapse: collapse;
+	}
+}
+

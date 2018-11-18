@@ -1,0 +1,82 @@
+.in_Guitars {
+	color: #1F313C; 
+	margin-bottom: 90px;
+
+	h2 {
+		text-align: center;
+		font-size: 35px; 
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	&-video {
+		display: flex; 
+		justify-content: center; 
+		margin-bottom: 80px;
+
+		&-demo {
+			max-width: 500px; 
+			width: 100%; 
+			border: 5px solid #3c5b6e;
+
+			&-responsive {
+				position: relative; 
+				padding-top: 54.6%;
+				
+				&-src {
+					position: absolute; 
+					right: 0; 
+					bottom: 0; 
+					top: 0; 
+					left: 0; 
+					width: 100%; 
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	&-acoustics,
+	&-classic {
+		margin: 10px 10px 40px 10px; 
+		padding: 10px; 
+		border:3px solid #1F313C; 
+		border-radius: 8px;
+
+		ol {
+			padding: 0;
+		}
+
+		&-subtitle {
+			font-size: 50px; 
+			margin-bottom: 20px;
+		}
+	}
+
+	&-acoustics {
+		&-img {
+			position: relative; 
+			float: right; 
+			top:-127px; 
+			right: 0;
+		}
+
+		&-guitar {
+			padding-left: 30px;
+		}
+	}
+
+	&-classic {
+		height: 190px;
+
+		&-img {
+			position:relative;
+			float: left;
+		}
+
+		&-guitar {
+			position: relative; 
+			margin-left: 370px; 
+			bottom:90px;
+		}
+	}
+}
