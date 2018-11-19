@@ -1,0 +1,73 @@
+.in_Footer {
+	background: #273b47; 
+	padding: 2em;
+
+	&-cont {
+		display: flex;
+    justify-content: space-between;
+	}
+
+	&-contact {
+		img {
+			display: block;
+			margin-bottom: 13em;
+		}
+
+		strong {
+			display: block;
+			margin-bottom: 0.5em;
+			font-weight: bold;
+		}
+
+		a{
+			display: block;
+			margin-bottom: 2em;
+		}
+	}
+
+	&-form {
+		label {
+			margin-bottom: 0.5em;
+		}
+
+		color: $white;
+
+		&-left,
+		&-right {
+			display: flex; 
+			flex-direction: column;
+		}
+
+		&-left {
+			input {
+				vertical-align: sub;
+			}
+
+			&-sex,
+			input {
+				margin-bottom: 1.5em;
+				height: 1.5em;
+			}
+
+			&-interests {
+				label {
+					font-size: 12px;
+				}
+			}
+		}
+
+		&-right {
+			textarea {
+				margin-bottom: 2em;
+			}
+			
+			&-btn {
+				@include build-btn(primary, linear-gradient(to left, $orange-strong, $orange-light), linear-gradient(to left, $orange-strong-hover, $orange-light-hover), $white);
+			}
+		}
+	}
+}
+
+input, textarea{outline: 0;}
+
+input:focus, textarea:focus{background: lightgray;}

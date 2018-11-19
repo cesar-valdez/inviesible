@@ -1,0 +1,224 @@
+@media screen and (-webkit-min-device-pixel-ratio: 2)
+{
+	.in_Main {
+		background-image: url("../img/background2x.png"); 
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.in_Main {
+		height: 25em;
+	}
+	
+	.in_Table {
+		width: initial;
+    padding: 2em 2em 7em;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.in_Main {
+		height: auto !important;
+
+		&-invie {
+			&-title {
+				font-size: 3em;
+			} 
+
+			&-description {
+				font-size: 1em;
+			}
+		}
+
+		&-header {
+			&-logo {
+				img {
+					width: auto;
+				}
+			}
+		}
+	}
+
+	.in_Guitars {
+		&-video {
+			margin-bottom: 5em;
+		}
+
+		&-acoustics,
+		&-classic {
+			text-align: center;
+
+			&-img {
+				float: none;
+				position: static;
+				width: 15em;
+				display: block;
+				margin: auto;
+			}
+
+			li {
+				list-style: none;
+			}
+		}
+
+		&-classic {
+			&-guitar {
+				float: initial;
+			}
+		}
+	}
+
+	.in_Footer {
+		&-cont {
+			flex-direction: column;
+		}
+
+		&-contact {
+			img {
+				margin-bottom: 2em;
+			}
+
+			a {
+				margin-bottom: 1em;
+			}
+		}
+
+		input[type="text"],
+		input[type="email"] {
+			padding: 0.5em;
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {		
+			zoom: 1.5;
+		}
+
+		&-form {
+			&-left {
+				&-interests {
+					label {
+						font-size: 1em;
+						margin-right: 1em;				
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.in_Main {
+		&-header {
+			flex-direction: column;
+
+			&-logo {
+				margin-bottom: 2em;
+			}
+		}
+	}
+}	
+
+@media screen and (max-width: 576px) {
+	h2 {
+		font-size: 1.5em;
+	}
+
+	.in_Main {
+		text-align: center;
+		padding: 3em 2em;
+
+		&-header {
+			margin-bottom: 2em;
+			
+			&-logo {
+				margin-bottom: 0;
+			}
+		}
+		
+		button {
+			width: 100%;
+		}
+
+		&-header {
+			&-menu {
+				background: rgba(39, 59, 71, 0.9);
+				position: fixed; 
+				top: 0; 
+				left: -100%; 
+				z-index: 2; 
+				bottom: 0; 
+				right: 0; 
+				display: flex; 
+				flex: 1; 
+				align-items: center; 
+				width: 100%; 
+				transition: .3s;
+
+				&.active {
+					left: 0;
+				}
+
+				ul {
+					flex: 1;
+
+					li {
+						display: block; 
+						border-bottom: 1px solid white; 
+						margin: 0; 
+						padding: 10px 0;
+	
+						&:first-child {
+							border-top: 1px solid white;
+						}
+						
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&-burgerBtn {
+				display: block;
+			}
+		}
+
+		&-invie {
+			&-title {
+				font-size: 2em;
+			}
+
+			&-description {
+				font-size: 1em;
+			}
+		}
+	}
+
+	.in_Guitars {
+		padding: 2em 0.5em;
+
+		&-video {
+			margin-bottom: 3em;
+		}
+
+		&-acoustics,
+		&-classic {
+			&-img {
+				width: 12em;
+			}
+
+			&-guitar {
+				h3 {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+	.in_Table {
+		&-cont {
+			overflow: auto;
+		}
+	}
+}

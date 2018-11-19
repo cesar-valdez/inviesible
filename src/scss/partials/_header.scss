@@ -1,0 +1,70 @@
+.in_Main {
+	color: $white; 
+	background-color: $blue-bg;
+	background-image: url("../img/background.png"); 
+	background-size: cover;
+	padding: 2em; 
+	height: 30em;
+
+	&-header {
+		display: flex;
+    justify-content: space-between;
+		align-items: center;
+		margin-bottom: 4.5em;
+	
+		&-burgerBtn {
+			width: 40px; 
+			height: 40px; 
+			line-height: 40px; 
+			border-radius: 50%; 
+			background: $color-letter;  
+			display: inline-block; 
+			text-align: center; 
+			position: fixed; 
+			left: 20px; 
+			top: 20px; 
+			color: $white; 
+			cursor: pointer; 
+			z-index: 3; 
+			display: none;
+		}
+
+		&-menu {
+			font-size: 1.5em;
+
+			li {
+				display: inline-block; 
+				margin-left: 1em;
+			}
+			
+			li:before {
+				content: '°'; 
+				vertical-align: sub;
+				margin-right: 0.3em;
+			}
+		}
+	}
+
+	&-invie {
+		&-title {
+			font-size:4em; 
+			font-family: 'Montserrat', sans-serif; 
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+
+			span {
+				text-decoration: underline;
+			}
+		}
+
+		&-description {
+			font-size: 1.5em; 
+			margin-bottom: 1.5em;
+			font-weight: bold;
+		}
+
+		&-btn {
+			@include build-btn(primary, linear-gradient(to left, $orange-strong, $orange-light), linear-gradient(to left, $orange-strong-hover, $orange-light-hover), $white);
+		}
+	}
+}

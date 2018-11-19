@@ -1,0 +1,27 @@
+
+.in_Table {
+	width: 100%;
+	padding: 2em 0 7em;
+
+	th {
+		background: $color-table; 
+		color: $white; 
+		padding: 0.7em; 
+		text-align: left;
+	}
+
+	td {
+		padding: 1em;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	table, 
+	th, 
+	td {
+		border: 1px solid $color-table; 
+		border-collapse: collapse;
+	}
+}
