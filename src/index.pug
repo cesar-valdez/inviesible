@@ -1,0 +1,119 @@
+DOCTYPE
+html
+	head
+		meta(charset="utf-8")
+		link(href='https://fonts.googleapis.com/css?family=Montserrat:500,700|Allerta' rel='stylesheet' type='text/css')
+		title(Invie - tus mejores guitarras)
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body
+		section#portada.in_Main
+			header#header.in_Main-header.container
+				figure.in_Main-header-logo
+					//el alt es una buena practica el texto que sale si la imagen no carga
+					img(src="img/invie.png" srcset="img/invie.png 1x, img/invie2x.png 2x" width="286" height="60" alt="invie-logotipo")
+				span#burger-button.in_Main-header-burgerBtn.icon-menu
+				nav#menu.in_Main-header-menu
+					ul
+						li
+							span#menu.in_Main-header-menu-home Home
+						li
+							span#menu.in_Main-header-menu-guitars Guitarras
+						li
+							span#menu.in_Main-header-menu-price Precios
+			div.container.in_Main-invie
+				h1.in_Main-invie-title Guitarras <span>invie</span>sibles</h1>
+				h3.in_Main-invie-description Sé la estrella de rock que siempre quisiste ser
+				a.in_Main-invie-btn(href="#guitarras") Conoce mas
+			
+		section#guitarras.in_Guitars.container
+			h2 Nuestras guitarras
+			//para hacer videos responsivos de youtube
+			div.in_Guitars-video.video-demo-container
+				div.in_Guitars-video-demo
+					div.in_Guitars-video-demo-responsive
+						iframe.in_Guitars-video-demo-responsive-src(width="560" height="315" src="https://www.youtube.com/embed/tNunnoAIJ7Y" frameborder="0" allowfullscreen)
+			//para hacer videos responsivos subidos por src
+			//<video src="videos/Reason.mp4"></video>
+			article.in_Guitars-acoustics
+				img.in_Guitars-acoustics-img(src="img/invie-acustica.png" data-src="img/invie-acustica.png|img/invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350")
+				div.in_Guitars-acoustics-guitar
+					h3.in_Guitars-acoustics-subtitle Invie Acustica
+					ol
+						li Estilo Vintage
+						li Madera pura
+						li incluye estuche de invisible de aluminio 
+			article.in_Guitars-classic
+				img.in_Guitars-classic-img(src="img/invie-classic.png" data-src="img/invie-classic.png|img/invie-classic2x.png" alt="Guitarra Invie Classic" width="350")
+				div.in_Guitars-acoustics-guitar
+					h3.in_Guitars-acoustics-guitar-subtitle Invie Classic
+					ol
+						li Estilo Vintage
+						li Liviana
+						li inicia tu camino como rockstar
+				
+		section#precios.in_Table
+			div.container
+				table
+					thead
+						tr
+							th Modelo
+							th Precio
+							th Descripcion
+							th Modelo
+							th Precio
+							th Descripcion
+					
+					tbody
+						tr
+							td Invie Classic
+							td $100,000
+							td Guitarra clasica
+							td Invie Classic
+							td $100,000
+							td Guitarra clasica 
+						tr
+							td Invie Classic
+							td $100,000
+							td Guitarra clasica 
+							td Invie Classic
+							td $100,000
+							td Guitarra clasica
+		footer.in_Footer
+			div.container 
+				div.in_Footer-contact
+					img(src="img/invie-white.png" data-src="img/invie-white.png|img/invie-white2x.png" alt="logotipo blanco")
+					a(href="tel:+578442906072")
+						strong Telefono
+						span 8442906072
+					a(href="mailto:cesark_19@hotmail.com")
+						strong E-mail
+						span cesar.valdez1095@gmail.com
+				form.in_Footer-form
+					div.in_Footer-form-left
+						label(for="nombre") Nombre
+						input#nombre(type="text" required name="nombre")
+						label(for="email") E-mail
+						input#email(type="text" required name="email")
+						div.in_Footer-form-left-sex
+							label(for="mujer") Mujer
+								input#mujer(type="radio" checked name="sexo" value="mujer")
+							label(for="hombre") Hombre
+								input#hombre(type="radio" name="sexo" value="hombre")
+							
+						div.in_Footer-form-left-interests
+							label(for="cotizaicion") Cotizaicion
+								input#cotizaicion(type="checkbox" checked name="intereses" value="cotizaicion")
+							label(for="reclamos") Reclamos
+								input#reclamos(type="checkbox" name="intereses" value="reclamos") 
+							label(for="comentarios") Comentarios
+								input#comentarios(type="checkbox" name="intereses" value="comentarios")
+							label(for="otros") Otros
+								input#otros(type="checkbox" name="intereses" value="otros")
+						div.in_Footer-form-right
+							label(for="comentarios") Comentarios
+							textarea#comentarios(name="comentarios" cols="30" rows="7")
+							input.in_Footer-form-right-btn(type="submit" value="Enviar")
+				
+	script(src="./app.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js")
