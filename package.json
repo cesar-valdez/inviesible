@@ -22,5 +22,8 @@
     "parcel-bundler": "^1.10.3",
     "pug": "^2.0.3",
     "sass": "^1.15.1"
+  },
+  "dependencies": {
+    "reset-css": "^4.0.1"
   }
 }
