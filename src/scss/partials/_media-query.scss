@@ -6,23 +6,28 @@
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
 	.in_Main {
-		height: auto;
+		height: 25em;
+	}
+	
+	.in_Table {
+		width: initial;
+    padding: 2em 2em 7em;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.in_Main {
+		height: auto !important;
 
 		&-invie {
 			&-title {
-				font-size: 45px; 
-				margin-top: 30px;
+				font-size: 3em;
 			} 
 
 			&-description {
-				font-size: 18px;
-			}
-
-			&-btn {
-				margin-bottom:30px; 
-				display: inline-block;
+				font-size: 1em;
 			}
 		}
 
@@ -37,7 +42,7 @@
 
 	.in_Guitars {
 		&-video {
-			margin-bottom: 30px;
+			margin-bottom: 5em;
 		}
 
 		&-acoustics,
@@ -45,9 +50,11 @@
 			text-align: center;
 
 			&-img {
-				float: none; 
+				float: none;
 				position: static;
 				width: 15em;
+				display: block;
+				margin: auto;
 			}
 
 			li {
@@ -56,44 +63,30 @@
 		}
 
 		&-classic {
-			height: auto;
-
 			&-guitar {
-				position: static; margin: 0;
-			}
-		}
-
-		&-acoustics {
-			&-subtitle {
-				margin: 0;
-			}
-
-			&-guitar {
-				padding: 0;
+				float: initial;
 			}
 		}
 	}
 
-	.in_Table {
-		margin: 50px 20px;
-		
-		.container {
-			overflow: auto; 
-			border: 1px solid #273b47;
-		}
-	}
-}
-
-@media screen and (max-width: 767px) {
 	.in_Footer {
-		input[type="text"],
-		input[type="email"] {		
-			font-size: 16px; 
-			padding: 5px;
+		&-cont {
+			flex-direction: column;
 		}
 
-		textarea {
-			width: 100%;
+		&-contact {
+			img {
+				margin-bottom: 2em;
+			}
+
+			a {
+				margin-bottom: 1em;
+			}
+		}
+
+		input[type="text"],
+		input[type="email"] {
+			padding: 0.5em;
 		}
 
 		input[type="radio"],
@@ -101,30 +94,12 @@
 			zoom: 1.5;
 		}
 
-		.container {
-			display: block;	
-		}
-
-		&-contact {
-			margin: 0 auto;
-			
-			a {
-				margin: 0;
-			}
-		}
-
 		&-form {
-			display: block; 
-			margin: 0 auto; 
-			width: 320px;
-
 			&-left {
-				margin: 0;
-				
 				&-interests {
 					label {
-						display: block; 
-						font-size: 16px;
+						font-size: 1em;
+						margin-right: 1em;				
 					}
 				}
 			}
@@ -132,46 +107,42 @@
 	}
 }
 
-@media screen and (max-width: 650px)
-{
+@media screen and (max-width: 680px) {
 	.in_Main {
 		&-header {
-			text-align: center;
+			flex-direction: column;
 
 			&-logo {
-				margin: 0;
-			}
-
-			&-menu {
-				position: static; 
-				display: block; 
-				text-align: center;
-				
-				ul {
-					padding: 0;
-					
-					li:first-child {
-						margin: 0;
-					}
-				}
+				margin-bottom: 2em;
 			}
 		}
 	}
 }	
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
+	h2 {
+		font-size: 1.5em;
+	}
+
 	.in_Main {
 		text-align: center;
+		padding: 3em 2em;
 
-		.container{
-			position: static;
+		&-header {
+			margin-bottom: 2em;
+			
+			&-logo {
+				margin-bottom: 0;
+			}
+		}
+		
+		button {
+			width: 100%;
 		}
 
 		&-header {
-			position: static;
-
 			&-menu {
-				background: rgba(255, 60, 88,.8); 
+				background: rgba(39, 59, 71, 0.9);
 				position: fixed; 
 				top: 0; 
 				left: -100%; 
@@ -215,43 +186,39 @@
 
 		&-invie {
 			&-title {
-				font-size: 30px;
+				font-size: 2em;
 			}
 
 			&-description {
-				font-size: 14px;
-			}
-
-			&-btn {
-				display: block;
+				font-size: 1em;
 			}
 		}
 	}
 
 	.in_Guitars {
+		padding: 2em 0.5em;
+
 		&-video {
-			margin: 0 10px 30px 10px;
+			margin-bottom: 3em;
 		}
 
 		&-acoustics,
 		&-classic {
 			&-img {
-				width: 200px;
+				width: 12em;
 			}
 
 			&-guitar {
-				&-subtitle {
-					font-size: 30px;
+				h3 {
+					font-size: 1.5em;
 				}
 			}
 		}
 	}
 
-	.in_Footer {
-		&-form {
-			&-right {
-				align-items: stretch;
-			}
+	.in_Table {
+		&-cont {
+			overflow: auto;
 		}
 	}
 }

@@ -1,22 +1,16 @@
 .in_Guitars {
-	color: #1F313C; 
-	margin-bottom: 90px;
-
-	h2 {
-		text-align: center;
-		font-size: 35px; 
-		font-family: 'Montserrat', sans-serif;
-	}
+	color: $color-content; 
+	padding: 2em;
 
 	&-video {
 		display: flex; 
 		justify-content: center; 
-		margin-bottom: 80px;
+		margin-bottom: 8em;
 
 		&-demo {
 			max-width: 500px; 
 			width: 100%; 
-			border: 5px solid #3c5b6e;
+			border: 5px solid $color-content;
 
 			&-responsive {
 				position: relative; 
@@ -37,46 +31,47 @@
 
 	&-acoustics,
 	&-classic {
-		margin: 10px 10px 40px 10px; 
-		padding: 10px; 
-		border:3px solid #1F313C; 
-		border-radius: 8px;
+		margin-bottom: 3em;
+    padding: 1em 2em;
+    border: 3px solid $color-content;
+    border-radius: 8px;
+		min-height: 12em;
+		position: relative;
 
 		ol {
 			padding: 0;
+			list-style: decimal;
+
+			li {
+				margin-bottom: 1em;
+			}
 		}
 
 		&-subtitle {
-			font-size: 50px; 
-			margin-bottom: 20px;
+			font-size: 2.5em; 
+			margin-bottom: 1.5rem;
+			font-weight: bold;
 		}
 	}
 
 	&-acoustics {
 		&-img {
-			position: relative; 
+			position: absolute; 
 			float: right; 
-			top:-127px; 
+			top:-125px; 
 			right: 0;
-		}
-
-		&-guitar {
-			padding-left: 30px;
 		}
 	}
 
 	&-classic {
-		height: 190px;
-
 		&-img {
-			position:relative;
+			position: absolute;
 			float: left;
 		}
 
 		&-guitar {
-			position: relative; 
-			margin-left: 370px; 
-			bottom:90px;
+			display: inline-block;
+			float: right;
 		}
 	}
 }
