@@ -39,17 +39,31 @@
 .icon-email:before {
 	content: "\ea85";
 }
-   
+	
+@import './variables/index';
+@import './mixins/index';
  
 body {
 	font-family: 'Allerta', sans-serif; margin: 0;
-}   
-  
+	box-sizing: border-box; 
+} 
+
+a {
+	color: $white;	
+	text-decoration: none;
+}
+ 
+h2 {
+	font-size: 2.5em;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
 /*la medida max-width del contenedor nos va a ayudar hacerlo responsive design*/
-.container {
-	max-width: 800px; 
-	margin: auto; 
-	position: relative;
+.u_Container {
+	max-width: 900px; 
+	margin: auto;
 }
 
 @import 'partials/header';

@@ -1,43 +1,36 @@
 .in_Footer {
 	background: #273b47; 
-	padding: 50px 10px;
+	padding: 2em;
 
-	label,
-	input,
-	&-form-left-sex {
-		margin-bottom: 0.5em;
-	}
-
-	.container {
-		display: flex; 
-		justify-content: space-between;
+	&-cont {
+		display: flex;
+    justify-content: space-between;
 	}
 
 	&-contact {
-		width: 300px; 
-		display: flex; 
-		flex-wrap: wrap; 
-		align-items: center;
-
 		img {
 			display: block;
+			margin-bottom: 13em;
 		}
 
 		strong {
 			display: block;
+			margin-bottom: 0.5em;
+			font-weight: bold;
 		}
 
-		a {
-			color: white; 
-			text-decoration: none; 
-			margin: 10px 14px 10px 0;
+		a{
+			display: block;
+			margin-bottom: 2em;
 		}
 	}
 
 	&-form {
-		width: 400px; 
-		display: flex; 
-		color: white;
+		label {
+			margin-bottom: 0.5em;
+		}
+
+		color: $white;
 
 		&-left,
 		&-right {
@@ -46,7 +39,15 @@
 		}
 
 		&-left {
-			margin: 15px;
+			input {
+				vertical-align: sub;
+			}
+
+			&-sex,
+			input {
+				margin-bottom: 1.5em;
+				height: 1.5em;
+			}
 
 			&-interests {
 				label {
@@ -56,26 +57,17 @@
 		}
 
 		&-right {
-			align-items: flex-start;
-
+			textarea {
+				margin-bottom: 2em;
+			}
+			
 			&-btn {
-				margin-top: 15px;
-				border-radius: 12px;
-				background: #fd324e;
-				color: white;
-				border: none;
-				padding: 7px 12px;
-				text-decoration: none;
-				cursor: pointer;
-				font-size: 18px;
-				background: linear-gradient(to left, #fe344e, #ff7250);
+				@include build-btn(primary, linear-gradient(to left, $orange-strong, $orange-light), linear-gradient(to left, $orange-strong-hover, $orange-light-hover), $white);
 			}
 		}
 	}
 }
 
-input, textarea{outline: 0;}/*para quitar el marcado alrededore de los inputs*/
+input, textarea{outline: 0;}
 
 input:focus, textarea:focus{background: lightgray;}
-
-

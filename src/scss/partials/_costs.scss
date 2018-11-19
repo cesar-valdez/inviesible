@@ -1,24 +1,27 @@
 
 .in_Table {
 	width: 100%;
-	margin: 65px 0;
+	padding: 2em 0 7em;
 
 	th {
-		background: #273b47; 
-		color: white; 
-		padding: 10px 20px; 
+		background: $color-table; 
+		color: $white; 
+		padding: 0.7em; 
 		text-align: left;
 	}
 
 	td {
-		padding: 20px;
+		padding: 1em;
+	}
+
+	table {
+		width: 100%;
 	}
 
 	table, 
 	th, 
 	td {
-		border: 1px solid #273b47; 
+		border: 1px solid $color-table; 
 		border-collapse: collapse;
 	}
 }
-
